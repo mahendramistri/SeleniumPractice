@@ -13,7 +13,7 @@ public class Dropdwn_Test {
 
 	public static void main(String[] args) {
 
-		System.setProperty("webdriver.chrome.driver", "d:\\chromedriver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "/home/dell/Documents/Drivers/chromedriver/chromedriver");
 		WebDriver driver = new ChromeDriver();
 
 		// expected wait condition

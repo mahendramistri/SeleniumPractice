@@ -10,9 +10,10 @@
   <name>SeleniiumPractice</name>
   <url>http://maven.apache.org</url>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
 
   <dependencies>
   
@@ -37,6 +38,11 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-    
+      <dependency>
+          <groupId>io.github.bonigarcia</groupId>
+          <artifactId>webdrivermanager</artifactId>
+          <version>3.8.1</version>
+          <scope>test</scope>
+      </dependency>
   </dependencies>
 </project>
