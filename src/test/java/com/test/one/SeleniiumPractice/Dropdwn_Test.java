@@ -13,15 +13,12 @@ public class Dropdwn_Test {
 
 	public static void main(String[] args) {
 
-		System.setProperty("webdriver.chrome.driver", "/home/dell/Documents/Drivers/chromedriver/chromedriver");
+		System.setProperty("webdriver.chrome.driver", ReadProperties.getProperties("chromepath"));
 		WebDriver driver = new ChromeDriver();
-
-		// expected wait condition
-
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		By elem_dynamic = By.name("country");
-
-		driver.navigate().to("http://demo.guru99.com/test/newtours/register.php");
+		String url = ReadProperties.getProperties("url");
+		driver.navigate().to(url);
 		wait.until(ExpectedConditions.presenceOfElementLocated(elem_dynamic));
 		Select dropdown = new Select(driver.findElement(By.name("country")));
 		dropdown.selectByVisibleText("antarctica");
